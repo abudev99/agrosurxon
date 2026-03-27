@@ -14,16 +14,16 @@ import {
 const injectStyles = () => {
   const style = document.createElement('style');
   style.innerHTML = `
-    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
     
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Manrope', sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #FAFAFA;
       color: #1A1A1A;
     }
     h1, h2, h3, h4, h5, h6, .font-serif {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Merriweather', serif;
     }
     
     ::-webkit-scrollbar { width: 8px; }
@@ -69,343 +69,339 @@ const injectStyles = () => {
 // --- DATA & TRANSLATIONS ---
 const content = {
   uz: {
-    nav: { home: "Asosiy", about: "Korxona", catalog: "Katalog", calendar: "Mavsum", logistics: "Logistika", calculator: "Kalkulyator", faq: "FAQ", contact: "Aloqa", download: "Katalog (PDF)" },
+    nav: { home: "Asosiy", about: "Korxona", catalog: "Katalog", calendar: "Mavsum", logistics: "Logistika", calculator: "Kalkulyator", faq: "Savollar", contact: "Aloqa", download: "Katalog (PDF)" },
     hero: {
-      title: "Surxondaryo Agro Export — Ulgurji Ta'minotchi",
-      subtitle: "MDH va Yevropa bozorlari uchun yashiklarga qadoqlangan, kalibrovka qilingan eksportbop meva va sabzavotlar.",
-      cta1: "Katalogni ko'rish",
-      cta2: "Kalkulyatsiya olish",
+      title: "Agro-Surxon Export — Xalqaro Darajadagi Ulgurji Ta'minotchi",
+      subtitle: "MDH, Yaqin Sharq va Yevropa bozorlari uchun xalqaro standartlar asosida qadoqlangan, qat'iy sifat nazoratidan o'tgan ekologik toza meva va sabzavotlar eksporti.",
+      cta1: "Eksport Katalogi",
+      cta2: "Narxlarni So'rash",
       anim: {
-        step1: "1. Dalaga ekish",
-        step1Sub: "Tabiiy parvarish",
-        step2: "2. Hosil va Saralash",
-        step2Sub: "Sifatli tanlov",
+        step1: "1. Agrotexnika",
+        step1Sub: "Dalada parvarish",
+        step2: "2. Saralash",
+        step2Sub: "Qat'iy nazorat",
         step3: "3. Qadoqlash",
-        step3Sub: "Yashiklarga joylash",
-        step4: "4. Eksport",
-        step4Sub: "Mijozga yetkazish"
+        step3Sub: "Xalqaro standart",
+        step4: "4. Logistika",
+        step4Sub: "Kafolatli yetkazish"
       }
     },
-    certs: ["Global G.A.P. Certified", "Fitosanitariya Nazorati", "ISO 9001:2015 Quality", "100% Yuridik Toza", "MAP Qadoqlash Standarti"],
+    certs: ["Global G.A.P. Certified", "Fitosanitar Nazorat", "ISO 9001:2015 Sifat", "Yuridik Toza Hamkorlik", "MAP Qadoqlash Standarti"],
     video: {
-      title: "Eksport Jarayoni",
-      subtitle: "Daladan tortib, furalarga ortilishigacha bo'lgan to'liq jarayon bilan tanishing.",
-      caption: "Sifat nazorati va qadoqlash"
+      title: "Eksport Jarayoniga Nazar",
+      subtitle: "Mahsulotlarimiz daladan yig'ib olinganidan boshlab, furalarga ortilishigacha bo'lgan to'liq sifat nazorati jarayoni bilan tanishing.",
+      caption: "Korporativ Sifat va Qadoqlash"
     },
     about: {
-      title: "Bizning Korxona",
-      subtitle: "Agro-Surxon Export MChJ – O'zbekistonning janubiy darvozasidagi ishonchli hamkoringiz.",
-      text1: "Biz 10 yildan ortiq vaqt mobaynida Surxondaryo viloyatining sara qishloq xo'jaligi mahsulotlarini yetishtirish, saralash, qadoqlash va xalqaro bozorlarga eksport qilish bilan shug'ullanamiz.",
-      text2: "Korxonamiz zamonaviy sovutish kameralari (Cold Storage), kalibrovka uskunalari va qadoqlash liniyalari bilan to'liq jihozlangan bo'lib, xaridorlarga xalqaro standartlarga mos sifatli mahsulotlarni barqaror yetkazib berishni kafolatlaydi.",
+      title: "Korxonamiz Haqida",
+      subtitle: "«Agro-Surxon Export» MChJ – O'zbekistonning janubiy darvozasida joylashgan ishonchli va yirik eksport hamkoringiz.",
+      text1: "Kompaniyamiz 10 yildan ortiq vaqt mobaynida Surxondaryo viloyatining serhosil zaminida yetishtirilgan sara qishloq xo'jaligi mahsulotlarini yig'ish, chuqur saralash, xalqaro standartlarda qadoqlash va jahon bozorlariga yetkazib berish bilan muvaffaqiyatli shug'ullanib kelmoqda.",
+      text2: "Bizning ishlab chiqarish kompleksimiz eng so'nggi rusumdagi zamonaviy sovutish kameralari (Cold Storage), xorijiy kalibrovka uskunalari va avtomatlashtirilgan qadoqlash liniyalari bilan to'liq jihozlangan. Bu imkoniyatlar bizga B2B mijozlarimiz uchun yil davomida uzluksiz, yuz foiz sifat kafolatiga ega mahsulotlarni barqaror yetkazib berish imkonini ta'minlaydi.",
       points: [
-        "Zamonaviy qadoqlash liniyalari va omborlar",
-        "1500 tonnadan ortiq sig'imli muzlatgich kameralar",
-        "Bojxona postiga yaqin qulay logistik joylashuv"
+        "Xalqaro talablarga moslashtirilgan qadoqlash liniyalari va omborlar",
+        "Bir vaqtning o'zida 1500 tonnadan ortiq sig'imga ega muzlatgich kameralar",
+        "Bojxona terminallariga yaqin va qulay strategik logistik joylashuv"
       ]
     },
     products: {
-      title: "Eksport Katalogi",
-      subtitle: "Uzoq masofaga tashishga chidamli qilib qadoqlangan, xalqaro standartdagi mahsulotlarimiz.",
+      title: "Rasmiy Eksport Katalogi",
+      subtitle: "Uzoq masofaga transportirovka qilish uchun maxsus saralangan va xalqaro bozor talablari asosida qadoqlangan mahsulotlar ro'yxati.",
       categories: [
-        { id: 'all', label: "Barchasi" },
-        { id: 'fruits', label: "Mevalar" },
+        { id: 'all', label: "Barcha Mahsulotlar" },
+        { id: 'fruits', label: "Ho'l Mevalar" },
         { id: 'veg', label: "Sabzavotlar" },
-        { id: 'melon', label: "Poliz ekinlari" },
-        { id: 'dried', label: "Quruq mevalar" },
+        { id: 'melon', label: "Poliz Ekinlari" },
+        { id: 'dried', label: "Quritilgan Mevalar" },
         { id: 'nuts', label: "Yong'oqlar" },
         { id: 'legumes', label: "Dukkaklilar" }
       ],
-      avail: "Mavjud",
-      season: "Mavsumiy",
-      details: "Batafsil",
-      moq: "Min. buyurtma:",
-      pack: "Qadoq:",
-      caliber: "Kalibr/Nav:",
-      orderBtn: "Narxini bilish (WhatsApp)",
+      avail: "Omborda Mavjud",
+      season: "Mavsumiy Mahsulot",
+      details: "To'liq Ma'lumot",
+      moq: "Minimal hajm:",
+      pack: "Qadoqlash turi:",
+      caliber: "Kalibr / Nav:",
+      orderBtn: "Tijorat taklifini so'rash",
       items: [
-        { id: 1, cat: 'fruits', name: "Surxon Anori", status: "avail", img: "https://images.unsplash.com/photo-1590868309235-ea34bed7bd7f?auto=format&fit=crop&q=80&w=800", moq: "20 tonna (1 Fura)", pack: "Yog'och yashik (10 kg), Gofrotara", caliber: "70-100mm, 1-nav", desc: "Qalin po'stli, yirik donali eksportbop anor. Uzoq masofaga tashishga o'ta chidamli. Ikki qatorli qilib yashiklarga terilgan." },
-        { id: 2, cat: 'fruits', name: "Qora Uzum (Toifi)", status: "avail", img: "https://images.unsplash.com/photo-1596431985959-1c998f480eec?auto=format&fit=crop&q=80&w=800", moq: "10 tonna", pack: "Plastik yashik (8 kg)", caliber: "Yirik, shirinligi 18-22 brix", desc: "Plastik yashiklarga qog'oz to'shama va SO2 paketlar bilan qadoqlangan, muzlatgich kameralarida saqlangan uzum." },
-        { id: 3, cat: 'fruits', name: "Ertapishar Gilos", status: "season", img: "https://images.unsplash.com/photo-1528820600606-0ef5600cbfee?auto=format&fit=crop&q=80&w=800", moq: "5 tonna (Avia)", pack: "Gofro-yashik + MAP paket (5 kg)", caliber: "26mm - 32mm+", desc: "Gidrokuling qilingan va MAP texnologiyasi asosida qadoqlangan premium gilos. To'liq eksport talabiga javob beradi." },
-        { id: 4, cat: 'veg', name: "Eksport Piyoz (Sariq/Qizil)", status: "avail", img: "https://images.unsplash.com/photo-1518977956812-cd3dbadaaf31?auto=format&fit=crop&q=80&w=800", moq: "22 tonna", pack: "To'r qoplar (25-30 kg)", caliber: "5-7 sm, o'ta quruq", desc: "Dalada to'liq quritilgan, chig'iriqdan o'tkazilib kalibrovka qilingan va qoplarga joylangan piyoz." },
-        { id: 5, cat: 'veg', name: "Issiqxona Pomidori", status: "avail", img: "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?auto=format&fit=crop&q=80&w=800", moq: "15 tonna", pack: "Besh qavatli gofrotara (10 kg)", caliber: "Pushti va qizil, 150-200 gr", desc: "Karton yashiklarga 2 qator qilib maxsus qistirmalar bilan terilgan, ezilmasdan yetib borishi kafolatlangan pomidor." },
-        { id: 6, cat: 'melon', name: "Kuzgi Qovun", status: "season", img: "https://images.unsplash.com/photo-1598025555678-83141ba57519?auto=format&fit=crop&q=80&w=800", moq: "20 tonna", pack: "Karton quti yoki to'r qop", caliber: "3-5 kg / dona", desc: "MDH hududiga asosan to'r qoplarda yoki mijoz talabiga ko'ra yirik gofrotaralarda eksport qilinadigan shirin qovunlar." },
-        { id: 7, cat: 'melon', name: "Tarvuz", status: "season", img: "https://images.unsplash.com/photo-1589984662646-e7b2e4962f18?auto=format&fit=crop&q=80&w=800", moq: "20 tonna", pack: "Konteyner palet (Bulk)", caliber: "7-12 kg", desc: "Furalarga maxsus poddonlar (bin) yordamida yuklanadigan, tranzitga chidamli qalin po'stli tarvuzlar." },
-        { id: 8, cat: 'dried', name: "Mayiz va Quruq Mevalar", status: "avail", img: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&q=80&w=800", moq: "5 tonna", pack: "Karton yashik (10 kg) + Polietilen", caliber: "Premium, tozalangan", desc: "Color Sorter uskunalarida lazerli saralashdan o'tgan, chang va cho'plardan 99% tozalangan ulgurji quruq mevalar." },
-        { id: 9, cat: 'nuts', name: "Qobig'li Bodom", status: "avail", img: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&q=80&w=800", moq: "3 tonna", pack: "Qop (25-30 kg)", caliber: "Yirik hajmli, qog'oz po'choq", desc: "Tog'li hududlarda yetishtirilgan, qoplarga qadoqlangan eksportbop toza bodom." },
-        { id: 10, cat: 'legumes', name: "Mosh (Dukkakli)", status: "avail", img: "https://images.unsplash.com/photo-1583091993444-a957dbd7baaa?auto=format&fit=crop&q=80&w=800", moq: "22 tonna", pack: "Polipropilen qop (50 kg)", caliber: "3.2mm - 4.0mm+", desc: "Zavodda tozalangan, 99% sof holatdagi, maxsus qoplarga qadoqlangan mosh." }
+        { id: 1, cat: 'fruits', name: "Surxon Eksport Anori", status: "avail", img: "https://images.unsplash.com/photo-1605342023190-67a3536cce7c?auto=format&fit=crop&q=80&w=800", moq: "20 tonna (1 Fura)", pack: "Yog'och yashik yoki Gofrotara (10 kg)", caliber: "70-100mm, Oliy nav", desc: "Qalin po'stli va yirik donali, eksport uchun maxsus parvarishlangan anor navlari. Uzoq masofaga tashishga o'ta chidamli bo'lib, xaridor talabiga ko'ra ikki qatorli qilib yashiklarga qadoqlanadi." },
+        { id: 2, cat: 'fruits', name: "Qora Uzum (Toifi)", status: "avail", img: "https://images.unsplash.com/photo-1537494532650-705cdcc07659?auto=format&fit=crop&q=80&w=800", moq: "10 tonna (Refrijerator)", pack: "Plastik yashik qog'oz to'shamali (8 kg)", caliber: "Yirik hajmli, shirinligi 18-22 brix", desc: "Maxsus SO2 (Sulfur dioxide) paketlari yordamida qadoqlangan va muzlatgich kameralarida chuqur saqlangan kuzgi qora uzum. Yangiligini to'liq yo'qotmaydi." },
+        { id: 3, cat: 'fruits', name: "Ertapishar Kalibrli Gilos", status: "season", img: "https://images.unsplash.com/photo-1559181567-c1643c726a21?auto=format&fit=crop&q=80&w=800", moq: "5 tonna (Avia / Avto)", pack: "Gofro-yashik va MAP paket (5 kg)", caliber: "26mm - 32mm+, Premium nav", desc: "Eksport oldidan gidrokuling (Hydrocooling) qilingan va MAP texnologiyasi yordamida qadoqlangan premium gilos. To'liq yevropa va rus bozori eksport talablariga javob beradi." },
+        { id: 4, cat: 'veg', name: "Eksport Piyoz (Sariq va Qizil)", status: "avail", img: "https://images.unsplash.com/photo-1625904835711-0bd2408c4371?auto=format&fit=crop&q=80&w=800", moq: "22 tonna (1 Fura)", pack: "Eksport to'r qoplari (25-30 kg)", caliber: "5-7 sm, Mutlaqo quruq", desc: "Dalada to'liq quritilgan, chig'iriqdan o'tkazilib mexanik kalibrovka qilingan yuqori sifatli piyoz. Qishki uzoq muddatli saqlash va tranzit uchun eng maqbul tanlov." },
+        { id: 5, cat: 'veg', name: "Issiqxona Pomidori", status: "avail", img: "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?auto=format&fit=crop&q=80&w=800", moq: "15 tonna (Refrijerator)", pack: "Besh qavatli gofrotara (10 kg)", caliber: "Pushti va qizil, 150-200 gr", desc: "Karton yashiklarga 2 qator qilib, ezilishning oldini oluvchi maxsus qistirmalar bilan terilgan pomidor. Mijoz omborigacha mukammal holatda yetib borishi kafolatlanadi." },
+        { id: 6, cat: 'melon', name: "Kuzgi Kechki Qovun", status: "season", img: "https://images.unsplash.com/photo-1571575173700-afb9492e6a50?auto=format&fit=crop&q=80&w=800", moq: "20 tonna (1 Fura)", pack: "Yirik gofrotara yoki to'r qop", caliber: "3-5 kg / dona, Standart", desc: "MDH davlatlari hududiga asosan to'r qoplarda yoki yirik tarmoq mijozlari talabiga asosan maxsus karton gofrotaralarda eksport qilinadigan o'ta shirin va barqaror qovunlar." },
+        { id: 7, cat: 'melon', name: "Eksport Tarvuzi", status: "season", img: "https://images.unsplash.com/photo-1625244724103-9df1a070bf3c?auto=format&fit=crop&q=80&w=800", moq: "20 tonna (1 Fura)", pack: "Konteyner palet yoki Bulk (to'kma)", caliber: "7-12 kg, O'lchamlangan", desc: "Furalarga va vagonlarga maxsus yog'och poddonlar (bin) yordamida yuklanadigan, tranzit jarayonidagi tebranishlarga chidamli qalin po'stli, qizil tarvuzlar." },
+        { id: 8, cat: 'dried', name: "Ulgurji Quruq Mevalar", status: "avail", img: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&q=80&w=800", moq: "5 tonna", pack: "Karton yashik (10 kg) va Polietilen", caliber: "Premium nav, 99% tozalangan", desc: "Lazerli Color Sorter uskunalarida saralashdan o'tgan, begona jismlar va changdan 99% tozalangan yuqori sifatli ulgurji mayiz va turli quruq mevalar to'plami." },
+        { id: 9, cat: 'nuts', name: "Qobig'li Bodom", status: "avail", img: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&q=80&w=800", moq: "3 tonna", pack: "Toza qoplar (25-30 kg)", caliber: "Yirik hajmli, Qog'oz po'choq navi", desc: "Surxondaryoning tog'li hududlarida ekologik toza sharoitda yetishtirilgan, yaxshilab quritilgan va qoplarga standartlashtirib qadoqlangan eksportbop toza bodom." },
+        { id: 10, cat: 'legumes', name: "Dukkaklilar (Mosh)", status: "avail", img: "https://images.unsplash.com/photo-1585227718663-8ebdfa4282e7?auto=format&fit=crop&q=80&w=800", moq: "22 tonna (1 Fura)", pack: "Polipropilen qoplar (50 kg)", caliber: "3.2mm - 4.0mm+, Kalibrovka", desc: "Zavod sharoitida tozalangan, 99% sof holatga keltirilgan va xalqaro gigiyena normalariga javob beradigan maxsus qoplarga qadoqlangan ulgurji mosh mahsuloti." }
       ]
     },
     seasonality: {
-      title: "Mahsulotlar Mavsumiyligi",
-      subtitle: "To'rt fasl davomida eksportga tayyor bo'ladigan eng xaridorgir mahsulotlarimiz.",
-      seasons: ["Bahor", "Yoz", "Kuz", "Qish"],
-      emptyMsg: "Ushbu faslda yangi hosil kutilmoqda.",
+      title: "Korporativ Ta'minot Taqvimi",
+      subtitle: "Yilning to'rt fasli davomida korxonamiz tomonidan eksportga kafolatli tayyor bo'ladigan asosiy mahsulotlar kalendari.",
+      seasons: ["Bahor Fasli", "Yoz Fasli", "Kuz Fasli", "Qish Fasli"],
+      emptyMsg: "Ushbu faslda kelgusi eksport mavsumi uchun yangi hosil kutilmoqda.",
       items: [
-        // Bahor (Spring)
-        { name: "Ertapishar Gilos", active: [0], img: "https://images.unsplash.com/photo-1528820600606-0ef5600cbfee?auto=format&fit=crop&q=80&w=800" }, 
-        { name: "Qulupnay", active: [0], img: "https://images.unsplash.com/photo-1587324438673-56c802dc28bd?auto=format&fit=crop&q=80&w=800" }, 
-        { name: "Ertagi O'rik", active: [0], img: "https://images.unsplash.com/photo-1622359489955-4700d2da0737?auto=format&fit=crop&q=80&w=800" }, 
+        { name: "Ertapishar Gilos", active: [0], img: "https://images.unsplash.com/photo-1559181567-c1643c726a21?auto=format&fit=crop&q=80&w=800" }, 
+        { name: "Qulupnay", active: [0], img: "https://images.unsplash.com/photo-1517415170068-1bc49aeb00cb?auto=format&fit=crop&q=80&w=800" }, 
+        { name: "Ertagi O'rik", active: [0], img: "https://images.unsplash.com/photo-1596431985959-1c998f480eec?auto=format&fit=crop&q=80&w=800" }, 
         { name: "Ertagi Kartoshka", active: [0], img: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&q=80&w=800" }, 
         { name: "Sarimsoq Piyoz", active: [0], img: "https://images.unsplash.com/photo-1540148426940-664dc15f1066?auto=format&fit=crop&q=80&w=800" }, 
         { name: "Ertagi Karam", active: [0], img: "https://images.unsplash.com/photo-1596484552834-0a3733b1e062?auto=format&fit=crop&q=80&w=800" }, 
         
-        // Yoz (Summer)
-        { name: "Shaftoli", active: [1], img: "https://images.unsplash.com/photo-1630138944510-449e21935de9?auto=format&fit=crop&q=80&w=800" }, 
-        { name: "Tarvuz", active: [1], img: "https://images.unsplash.com/photo-1589984662646-e7b2e4962f18?auto=format&fit=crop&q=80&w=800" }, 
-        { name: "Qovun", active: [1], img: "https://images.unsplash.com/photo-1598025555678-83141ba57519?auto=format&fit=crop&q=80&w=800" }, 
+        { name: "Shaftoli", active: [1], img: "https://images.unsplash.com/photo-1590412200988-a436970781fa?auto=format&fit=crop&q=80&w=800" }, 
+        { name: "Tarvuz", active: [1], img: "https://images.unsplash.com/photo-1625244724103-9df1a070bf3c?auto=format&fit=crop&q=80&w=800" }, 
+        { name: "Qovun", active: [1], img: "https://images.unsplash.com/photo-1571575173700-afb9492e6a50?auto=format&fit=crop&q=80&w=800" }, 
         { name: "Olxo'ri", active: [1], img: "https://images.unsplash.com/photo-1600862086300-8cb4948a31db?auto=format&fit=crop&q=80&w=800" }, 
         { name: "Anjir", active: [1], img: "https://images.unsplash.com/photo-1601379327928-bee0a1cb00ce?auto=format&fit=crop&q=80&w=800" }, 
         { name: "Daladagi Pomidor", active: [1], img: "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?auto=format&fit=crop&q=80&w=800" }, 
         
-        // Kuz (Autumn)
-        { name: "Surxon Anori", active: [2], img: "https://images.unsplash.com/photo-1590868309235-ea34bed7bd7f?auto=format&fit=crop&q=80&w=800" }, 
-        { name: "Kechki Uzum", active: [2], img: "https://images.unsplash.com/photo-1596431985959-1c998f480eec?auto=format&fit=crop&q=80&w=800" }, 
+        { name: "Surxon Anori", active: [2], img: "https://images.unsplash.com/photo-1605342023190-67a3536cce7c?auto=format&fit=crop&q=80&w=800" }, 
+        { name: "Kechki Uzum", active: [2], img: "https://images.unsplash.com/photo-1537494532650-705cdcc07659?auto=format&fit=crop&q=80&w=800" }, 
         { name: "Xurmo", active: [2], img: "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&q=80&w=800" }, 
-        { name: "Qizil Olma", active: [2], img: "https://images.unsplash.com/photo-1560806887-1e4cd0b6fd6c?auto=format&fit=crop&q=80&w=800" }, 
-        { name: "Eksport Piyoz", active: [2], img: "https://images.unsplash.com/photo-1518977956812-cd3dbadaaf31?auto=format&fit=crop&q=80&w=800" }, 
-        { name: "Yong'oq", active: [2], img: "https://images.unsplash.com/photo-1554904257-27b2b00eefbd?auto=format&fit=crop&q=80&w=800" }, 
+        { name: "Qizil Olma", active: [2], img: "https://images.unsplash.com/photo-1573246123716-6b1782bfc499?auto=format&fit=crop&q=80&w=800" }, 
+        { name: "Eksport Piyoz", active: [2], img: "https://images.unsplash.com/photo-1625904835711-0bd2408c4371?auto=format&fit=crop&q=80&w=800" }, 
+        { name: "Yong'oq", active: [2], img: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&q=80&w=800" }, 
 
-        // Qish (Winter)
         { name: "Issiqxona Pomidori", active: [3], img: "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?auto=format&fit=crop&q=80&w=800" }, 
         { name: "Limon va Sitrus", active: [3], img: "https://images.unsplash.com/photo-1587317765103-605809783f98?auto=format&fit=crop&q=80&w=800" }, 
         { name: "Quruq Mevalar", active: [3], img: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&q=80&w=800" }, 
-        { name: "Mosh (Dukkakli)", active: [3], img: "https://images.unsplash.com/photo-1583091993444-a957dbd7baaa?auto=format&fit=crop&q=80&w=800" }, 
+        { name: "Mosh (Dukkakli)", active: [3], img: "https://images.unsplash.com/photo-1585227718663-8ebdfa4282e7?auto=format&fit=crop&q=80&w=800" }, 
         { name: "Bodom", active: [3], img: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&q=80&w=800" }, 
         { name: "Qishki Sabzi", active: [3], img: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&q=80&w=800" } 
       ]
     },
     packaging: {
-      title: "Fura va Palet Sig'imi",
-      subtitle: "Xalqaro logistika standartlari asosida mahsulotlaringizni xavfsiz qadoqlash sxemasi.",
-      truck: "1 Fura (Refrijerator)",
-      truckDesc: "Harorat rejimi: +2°C / +4°C. Umumiy hajm: 20-22 tonna. Tranzitga to'liq moslangan.",
-      pallet: "33 ta Evro Palet",
-      palletDesc: "1200x800 mm o'lchamdagi sertifikatlangan, fumigatsiyadan o'tgan yog'och paletlar.",
-      boxes: "100-120 ta Yashik / Palet",
-      boxesDesc: "5 qavatli sifatli gofrotara yoki plastik eksport yashiklari. Qatorlar orasi qistirmalar."
+      title: "Transport va Palet Sig'imi Xarakteristikasi",
+      subtitle: "Yuklarni xavfsiz va ziyon-zahmat yetkazmasdan tashish uchun ishlab chiqilgan xalqaro logistika standartlari.",
+      truck: "1 Fura (Refrijerator Transport)",
+      truckDesc: "O'rnatilgan harorat rejimi: +2°C / +4°C (mahsulotga qarab). Umumiy yuk ortish hajmi: 20-22 tonnagacha. Uzluksiz tranzitga to'liq moslangan tizim.",
+      pallet: "33 ta Standart Evro Palet",
+      palletDesc: "Xalqaro 1200x800 mm o'lchamdagi sertifikatlangan, sifatli yog'ochdan yasalgan va majburiy fumigatsiyadan o'tgan eksport paletlar majmuasi.",
+      boxes: "100-120 ta Yashik / 1 Palet",
+      boxesDesc: "Mahsulot og'irligiga qarab 5 qavatli sifatli gofrotara yoki zarbaga chidamli plastik yashiklar. Qatorlar orasida harorat ta'minlovchi qistirmalar mavjud."
     },
     calculator: {
-      title: "Logistika va Tranzit Kalkulyatori",
-      subtitle: "Yukingiz hajmi va manzilingizni kiriting, biz sizga taxminiy vaqt va transportni hisoblab beramiz.",
-      countryLabel: "Davlat (Manzil):",
-      transLabel: "Transport turi:",
-      weightLabel: "Yuk hajmi (tonna):",
-      btn: "Hisoblash",
-      resTitle: "Dastlabki Hisob-kitob (Taxminiy):",
-      resTime: "Taxminiy tranzit vaqti:",
-      resCount: "Kerakli transport:",
-      disclaimer: "* Eslatma: Barcha ko'rsatilgan raqamlar, vaqt va narxlar o'rtacha taxminiy bo'lib, ob-havo, bojxona va mavsumga qarab o'zgarishi mumkin.",
-      orderBtn: "Shu ma'lumot bilan narx so'rash"
+      title: "Logistika va Tranzit Hisob-kitobi",
+      subtitle: "Kompaniyangiz joylashgan manzil va kerakli yuk hajmini kiriting. Tizim sizga taxminiy yetkazib berish muddati va transport miqdorini avtomatik hisoblab beradi.",
+      countryLabel: "Belgilangan davlat (Manzil):",
+      transLabel: "Logistika transport turi:",
+      weightLabel: "Buyurtma qilinuvchi yuk hajmi (tonna):",
+      btn: "Natijani Avtomatik Hisoblash",
+      resTitle: "Dastlabki Hisob-kitob Natijasi:",
+      resTime: "Yukning taxminiy tranzit yetib borish vaqti:",
+      resCount: "Zarur bo'ladigan transport vositalari miqdori:",
+      disclaimer: "* Yuridik Eslatma: Yuqorida ko'rsatilgan barcha muddatlar va transport miqdorlari o'rtacha taxminiy hisoblanadi. Yakuniy aniq ma'lumotlar bojxona va ob-havo sharoitlariga qarab shartnomada belgilanadi.",
+      orderBtn: "Ushbu hisob-kitob bilan tijorat taklifi so'rash"
     },
     team: {
-      title: "Bizning Jamoa",
-      subtitle: "Eksport jarayonini yuqori darajada va uzluksiz ta'minlovchi professionallar.",
+      title: "Boshqaruv Jamoasi",
+      subtitle: "Kompaniyamizning xalqaro bozordagi ishonchliligi va uzluksiz ta'minot jarayonini kafolatlovchi tajribali mutaxassislar.",
       members: [
         { name: "Sardor Rahimov", role: "Boshqaruvchi Direktor (CEO)", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" },
-        { name: "Alisher Usmonov", role: "Eksport Bo'limi Boshlig'i", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400" },
-        { name: "Malika Karimova", role: "Sifat Nazorati Menejeri", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" },
-        { name: "Jasur Bekmurodov", role: "Logistika va Tranzit", img: "https://images.unsplash.com/photo-1556969562-b7b8089b09ad?auto=format&fit=crop&q=80&w=400" }
+        { name: "Alisher Usmonov", role: "Tashqi Iqtisodiy Aloqalar Bo'limi Boshlig'i", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400" },
+        { name: "Malika Karimova", role: "Sifat Nazorati va Sertifikatlashtirish Menejeri", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" },
+        { name: "Jasur Bekmurodov", role: "Xalqaro Logistika va Tranzit Mutaxassisi", img: "https://images.unsplash.com/photo-1556969562-b7b8089b09ad?auto=format&fit=crop&q=80&w=400" }
       ]
     },
     customs: {
-      title: "Bojxona va Hujjatlar",
-      subtitle: "Biz yuridik toza ishlaymiz. Hujjat namunasini ko'rish uchun ustiga bosing.",
+      title: "Bojxona Rasmiylashtiruvi va Hujjatlar",
+      subtitle: "Kompaniyamiz faoliyati 100% yuridik toza asosda olib boriladi. Xalqaro savdo uchun zarur hujjatlar namunasini ko'rish uchun ustiga bosing.",
       docs: [
-        { title: "Fitosanitariya Sertifikati", desc: "Karantin nazoratidan o'tganini tasdiqlovchi hujjat.", sample: "Fitosanitariya namunasi" },
-        { title: "ST-1 Kelib Chiqish Sert.", desc: "Bojxona bojlaridan imtiyoz olish uchun.", sample: "ST-1 sertifikat namunasi" },
-        { title: "Bojxona Deklaratsiyasi (EX-1)", desc: "Eksport rasmiylashtiruvi (yashil yo'lak).", sample: "EX-1 namunasi" },
-        { title: "Sifat Sertifikatlari", desc: "Global G.A.P, ISO xulosalari.", sample: "Sifat sertifikati namunasi" }
+        { title: "Fitosanitariya Sertifikati", desc: "Davlat Karantin nazoratidan rasman o'tganligini va tozaligini tasdiqlovchi majburiy hujjat.", sample: "Fitosanitariya Namunasi" },
+        { title: "ST-1 Kelib Chiqish Sertifikati", desc: "MDH davlatlari hududida bojxona to'lovlaridan imtiyoz olinishini ta'minlovchi sertifikat.", sample: "ST-1 Sertifikat Namunasi" },
+        { title: "Bojxona Deklaratsiyasi (EX-1)", desc: "Mahsulotlarimiz tezkor «Yashil Yo'lak» orqali rasmiylashtirilishini isbotlovchi deklaratsiya.", sample: "EX-1 Deklaratsiya Namunasi" },
+        { title: "Xalqaro Sifat Sertifikatlari", desc: "Hamkorlar talabiga binoan olinadigan Global G.A.P, ISO 9001 kabi maxsus xulosalar.", sample: "Sifat Sertifikati Namunasi" }
       ],
-      modalTitle: "Hujjat Namunasi (Taxminiy)"
+      modalTitle: "Hujjatning Tasdiqlangan Namunasi"
     },
     faq: {
-      title: "Tez-tez So'raladigan Savollar",
+      title: "Hamkorlar Uchun Asosiy Savollar",
       items: [
-        { q: "Minimal buyurtma hajmi qancha?", a: "Avtomobil transporti (fura) uchun minimal hajm 20-22 tonna. Avia yuklar uchun esa minimal 1-5 tonnadan boshlanadi." },
-        { q: "To'lov shartlari qanday?", a: "Biz asosan FCA va DAP shartlarida ishlaymiz. To'lovlar bank o'tkazmasi orqali, qisman oldindan to'lov va yuklanganidan so'ng qoldiq to'lov asosida yoki akkreditiv (LC) orqali amalga oshiriladi." },
-        { q: "Mahsulot sifati qanday kafolatlanadi?", a: "Barcha mahsulotlar yuklanishdan oldin mustaqil ekspertiza yoki Fitosanitariya xizmati nazoratidan o'tadi. Furalarga haroratni nazorat qiluvchi datchiklar o'rnatiladi." },
-        { q: "Bojxona rasmiylashtiruvi qancha vaqt oladi?", a: "O'zbekistonda yashil yo'lak tizimi orqali bojxona rasmiylashtiruvi 2-4 soat ichida hal qilinadi. Barcha ST-1 va Fito sertifikatlar biz tomondan tayyorlanadi." }
+        { q: "Kompaniyangizda minimal eksport buyurtma hajmi qancha qilib belgilangan?", a: "Avtomobil transporti (fura) orqali yetkazib berish uchun minimal hajm 20-22 tonnani tashkil qiladi. Avia va yengil yuklar uchun esa minimal buyurtma kelishuv asosida 1-5 tonnadan boshlanadi." },
+        { q: "Korxonangiz bilan ishlashda qanday xalqaro to'lov shartlari qo'llaniladi?", a: "Biz asosan Incoterms qoidalariga asosan FCA va DAP shartlarida hamkorlik qilamiz. To'lovlar xalqaro bank o'tkazmalari orqali, qisman oldindan to'lov va yuklanganidan so'ng qoldiq to'lov asosida, yirik kelishuvlarda esa qaytarib olinmaydigan akkreditiv (LC) orqali amalga oshirilishi kafolatlanadi." },
+        { q: "Yukning sifati transportirovka jarayonida buzilmasligi qanday kafolatlanadi?", a: "Barcha mahsulotlarimiz furalarga ortilishidan oldin mustaqil ekspertiza va Davlat Fitosanitariya xizmati nazoratidan qat'iy o'tadi. Yuk tashish davomida doimiy monitoringni ta'minlash maqsadida furalarga maxsus haroratni nazorat qiluvchi datchiklar (termo-registratorlar) o'rnatiladi." },
+        { q: "Eksport va bojxona rasmiylashtiruvi jarayonlari o'rtacha qancha vaqt talab qiladi?", a: "O'zbekiston Respublikasi Bojxona qo'mitasining soddalashtirilgan «Yashil yo'lak» tizimi orqali bizning eksport rasmiylashtiruvi jarayonlarimiz 2-4 soat ichida to'liq hal qilinadi. Shuningdek, ST-1 va Fitosanitariya kabi barcha logistik hujjatlar paketi bizning malakali mutaxassislarimiz tomonidan mustaqil tayyorlanadi." }
       ]
     },
     contact: {
-      title: "Ulgurji Buyurtma Berish",
-      subtitle: "Bugunning o'zida joriy ulgurji narxlar va zavodingizgacha bo'lgan logistika narxini hisoblatib oling.",
-      address: "O'zbekiston, Surxondaryo viloyati, Termiz sh., Agro-Zon MFY",
-      call: "Qo'ng'iroq qilish",
-      whatsapp: "WhatsApp'da yozish"
+      title: "Rasmiy Hamkorlikni Boshlash",
+      subtitle: "Ayni damdagi ulgurji kotirovka narxlari va korxonangiz omborigacha bo'lgan logistika xarajatlari hisob-kitobini olish uchun biz bilan bog'laning.",
+      address: "O'zbekiston Respublikasi, Surxondaryo viloyati, Termiz shahri, Agro-Sanoat zonasi",
+      call: "Kompaniya raqamiga qo'ng'iroq",
+      whatsapp: "WhatsApp orqali yozishma"
     }
   },
   ru: {
-    nav: { home: "Главная", about: "О компании", catalog: "Каталог", calendar: "Сезонность", logistics: "Логистика", calculator: "Калькулятор", faq: "FAQ", contact: "Контакты", download: "Каталог (PDF)" },
+    nav: { home: "Главная", about: "О Компании", catalog: "Каталог", calendar: "Сезонность", logistics: "Логистика", calculator: "Калькулятор", faq: "Вопросы", contact: "Контакты", download: "Скачать PDF" },
     hero: {
-      title: "Surxondaryo Agro Export — Оптовый Поставщик",
-      subtitle: "Свежие фрукты и овощи, упакованные в тару и откалиброванные по международным стандартам для рынков СНГ и Европы.",
-      cta1: "Смотреть каталог",
-      cta2: "Получить расчет",
+      title: "Agro-Surxon Export — Ваш Надежный Оптовый Партнер",
+      subtitle: "Экспорт экологически чистых свежих фруктов и овощей для рынков СНГ, Ближнего Востока и Европы. Строгий контроль качества, калибровка и упаковка по международным стандартам.",
+      cta1: "Экспортный Каталог",
+      cta2: "Запросить Цены",
       anim: {
-        step1: "1. Посадка",
-        step1Sub: "Натуральный уход",
-        step2: "2. Сбор и Сортировка",
-        step2Sub: "Контроль качества",
+        step1: "1. Агротехника",
+        step1Sub: "Выращивание",
+        step2: "2. Сортировка",
+        step2Sub: "Строгий отбор",
         step3: "3. Упаковка",
-        step3Sub: "Укладка в тару",
-        step4: "4. Экспорт",
-        step4Sub: "Доставка клиенту"
+        step3Sub: "Мировой стандарт",
+        step4: "4. Логистика",
+        step4Sub: "Гарантия доставки"
       }
     },
     certs: ["Сертификат Global G.A.P.", "Фитосанитарный Контроль", "ISO 9001:2015 Качество", "100% Юридическая Чистота", "Стандарт Упаковки MAP"],
     video: {
-      title: "Процесс Экспорта",
-      subtitle: "Ознакомьтесь с полным циклом: от сбора на полях до погрузки в рефрижераторы.",
-      caption: "Контроль качества и упаковка"
+      title: "Взгляд на Процесс Экспорта",
+      subtitle: "Ознакомьтесь с полным циклом контроля качества: от сбора урожая на полях до безопасной погрузки в рефрижераторы.",
+      caption: "Корпоративные Стандарты Упаковки"
     },
     about: {
-      title: "О Нашей Компании",
-      subtitle: "ООО Agro-Surxon Export – ваш надежный партнер на южных воротах Узбекистана.",
-      text1: "На протяжении более 10 лет мы занимаемся выращиванием, сортировкой, упаковкой и экспортом лучшей сельскохозяйственной продукции Сурхандарьинской области на международные рынки.",
-      text2: "Наше предприятие полностью оснащено современными холодильными камерами, калибровочным оборудованием и упаковочными линиями, что гарантирует стабильную поставку качественной продукции, соответствующей международным стандартам.",
+      title: "Информация о Компании",
+      subtitle: "ООО «Agro-Surxon Export» – ваш стратегический и надежный партнер на южных воротах Узбекистана.",
+      text1: "Компания «Agro-Surxon Export» на протяжении более 10 лет успешно занимается сбором, тщательной сортировкой, упаковкой и экспортом лучшей сельскохозяйственной продукции, выращенной на плодородных землях Сурхандарьинской области.",
+      text2: "Наш производственный комплекс полностью оснащен современными высокотехнологичными холодильными камерами (Cold Storage), передовым калибровочным оборудованием и автоматизированными линиями упаковки. Это позволяет нам гарантировать корпоративным клиентам бесперебойные круглогодичные поставки продукции, на 100% соответствующей мировым стандартам качества.",
       points: [
-        "Современные упаковочные линии и склады",
-        "Холодильные камеры вместимостью более 1500 тонн",
-        "Удобное логистическое расположение рядом с таможней"
+        "Современные автоматизированные упаковочные линии и склады",
+        "Холодильные камеры единовременного хранения более 1500 тонн",
+        "Стратегически удобное логистическое расположение рядом с таможней"
       ]
     },
     products: {
-      title: "Экспортный Каталог",
-      subtitle: "Наша продукция надежно упакована и готова к длительной транспортировке.",
+      title: "Официальный Экспортный Каталог",
+      subtitle: "Специально отобранная и профессионально упакованная продукция, готовая к транспортировке на дальние расстояния в соответствии с требованиями мировых рынков.",
       categories: [
-        { id: 'all', label: "Все товары" },
-        { id: 'fruits', label: "Фрукты" },
-        { id: 'veg', label: "Овощи" },
-        { id: 'melon', label: "Бахчевые" },
+        { id: 'all', label: "Вся Продукция" },
+        { id: 'fruits', label: "Свежие Фрукты" },
+        { id: 'veg', label: "Свежие Овощи" },
+        { id: 'melon', label: "Бахчевые Культуры" },
         { id: 'dried', label: "Сухофрукты" },
         { id: 'nuts', label: "Орехи" },
-        { id: 'legumes', label: "Бобовые" }
+        { id: 'legumes', label: "Бобовые Культуры" }
       ],
-      avail: "В наличии",
-      season: "Сезонный",
-      details: "Подробнее",
-      moq: "Мин. заказ:",
-      pack: "Упаковка:",
-      caliber: "Калибр/Сорт:",
-      orderBtn: "Узнать цену (WhatsApp)",
+      avail: "В Наличии на Складе",
+      season: "Сезонный Продукт",
+      details: "Полная Информация",
+      moq: "Минимальный объем:",
+      pack: "Тип упаковки:",
+      caliber: "Калибр / Сорт:",
+      orderBtn: "Запросить коммерческое предложение",
       items: [
-        { id: 1, cat: 'fruits', name: "Сурханский Гранат", status: "avail", img: "https://images.unsplash.com/photo-1590868309235-ea34bed7bd7f?auto=format&fit=crop&q=80&w=800", moq: "20 тонн (1 Фура)", pack: "Деревянный ящик (10 кг), Гофротара", caliber: "70-100мм, 1-сорт", desc: "Толстокорый, крупный гранат для экспорта. Выложен в 2 ряда в ящиках. Отлично переносит длительную транспортировку." },
-        { id: 2, cat: 'fruits', name: "Черный Виноград (Тойфи)", status: "avail", img: "https://images.unsplash.com/photo-1596431985959-1c998f480eec?auto=format&fit=crop&q=80&w=800", moq: "10 тонн", pack: "Пластиковый ящик (8 кг)", caliber: "Крупный, сладость 18-22 brix", desc: "Виноград, сохраненный в холодильных камерах. Упакован в пластиковые ящики с бумажной подстилкой и пакетами SO2." },
-        { id: 3, cat: 'fruits', name: "Ранняя Черешня", status: "season", img: "https://images.unsplash.com/photo-1528820600606-0ef5600cbfee?auto=format&fit=crop&q=80&w=800", moq: "5 тонн (Авиа)", pack: "Гофроящик + MAP пакет (5 кг)", caliber: "26mm - 32mm+", desc: "Премиальная черешня, прошедшая гидрокулинг. Упаковывается с использованием MAP технологии для длительного срока годности." },
-        { id: 4, cat: 'veg', name: "Лук Экспортный (Желтый/Красный)", status: "avail", img: "https://images.unsplash.com/photo-1518977956812-cd3dbadaaf31?auto=format&fit=crop&q=80&w=800", moq: "22 тонны", pack: "Сетки (25-30 кг)", caliber: "5-7 см, абсолютно сухой", desc: "Тщательно высушенный лук, откалиброванный и упакованный в сетки, идеально для длительного хранения." },
-        { id: 5, cat: 'veg', name: "Тепличный Томат", status: "avail", img: "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?auto=format&fit=crop&q=80&w=800", moq: "15 тонн", pack: "5-слойная гофротара (10 кг)", caliber: "Розовый/Красный, 150-200 гр", desc: "Уложены в 2 ряда в картонные коробки с прокладками. Гарантия доставки без повреждений." },
-        { id: 6, cat: 'melon', name: "Дыня (Осенняя)", status: "season", img: "https://images.unsplash.com/photo-1598025555678-83141ba57519?auto=format&fit=crop&q=80&w=800", moq: "20 тонн", pack: "Короб или сетка", caliber: "3-5 кг / шт", desc: "Сладкие поздние сорта. Экспортируется в страны СНГ в сетках или больших картонных гофрокоробах." },
-        { id: 7, cat: 'melon', name: "Арбуз", status: "season", img: "https://images.unsplash.com/photo-1589984662646-e7b2e4962f18?auto=format&fit=crop&q=80&w=800", moq: "20 тонн", pack: "Контейнер-паллет (Bulk)", caliber: "7-12 кг", desc: "Арбузы с толстой кожурой, устойчивые к транзиту. Загружаются в фуры на специальных поддонах." },
-        { id: 8, cat: 'dried', name: "Изюм и Сухофрукты", status: "avail", img: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&q=80&w=800", moq: "5 тонн", pack: "Картон (10 кг) + Полиэтилен", caliber: "Премиум, очищенный", desc: "Оптовые сухофрукты, прошедшие лазерную сортировку (Color Sorter) с чистотой 99%." },
-        { id: 9, cat: 'nuts', name: "Миндаль в скорлупе", status: "avail", img: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&q=80&w=800", moq: "3 тонны", pack: "Мешок (25-30 кг)", caliber: "Крупный, бумажная скорлупа", desc: "Экологически чистый миндаль из горных районов, упакованный в мешки." },
-        { id: 10, cat: 'legumes', name: "Маш (Бобовые)", status: "avail", img: "https://images.unsplash.com/photo-1583091993444-a957dbd7baaa?auto=format&fit=crop&q=80&w=800", moq: "22 тонны", pack: "Полипропилен мешок (50 кг)", caliber: "3.2mm - 4.0mm+", desc: "Экспортный маш заводской очистки (99%), откалиброванный и упакованный в надежные мешки." }
+        { id: 1, cat: 'fruits', name: "Сурханский Экспортный Гранат", status: "avail", img: "https://agro-market24.eu/uploads/photos/95525/sprzedam_fruits-fresh-pomegranate-_agromarket_ceny%20rolnicze-755212-95525.jpg", moq: "20 тонн (1 Фура)", pack: "Деревянный ящик / Гофротара (10 кг)", caliber: "70-100мм, Высший сорт", desc: "Толстокорый, крупнозернистый гранат, выращенный специально для экспорта. Выложен в 2 ряда в ящиках. Отличается высочайшей устойчивостью к длительной транспортировке." },
+        { id: 2, cat: 'fruits', name: "Черный Виноград (Тайфи)", status: "avail", img: "https://userdata.agroserver.ru/pic/394800/2706868.jpg", moq: "10 тонн (Рефрижератор)", pack: "Пластиковый ящик (8 кг)", caliber: "Крупный, сладость 18-22 brix", desc: "Свежий осенний виноград, бережно сохраненный в промышленных холодильных камерах. Упакован в специальные пластиковые ящики с бумажной подстилкой и консервирующими пакетами SO2." },
+        { id: 3, cat: 'fruits', name: "Ранняя Калиброванная Черешня", status: "season", img: "https://media.istockphoto.com/id/496398001/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B0-%D1%81-%D0%B2%D0%B8%D1%88%D0%B5%D0%BD%D0%BE%D0%BA.jpg?s=612x612&w=0&k=20&c=xYuuiOHqe78O1TjzIr6EmWYOdGYf4tAKTw4RtQSTP9Y=", moq: "5 тонн (Авиа / Авто)", pack: "Гофроящик + Пакет MAP (5 кг)", caliber: "26mm - 32mm+, Премиум", desc: "Премиальная черешня, прошедшая обязательный процесс гидрокулинга (Hydrocooling). Упаковывается с использованием инновационной MAP технологии для обеспечения длительного срока годности на прилавках." },
+        { id: 4, cat: 'veg', name: "Лук Экспортный (Желтый и Красный)", status: "avail", img: "https://zn.ua/img/forall/u/495/25/nick-fewings-QazqqqxOSuE-unsplash.jpg", moq: "22 тонны (1 Фура)", pack: "Экспортные сетки (25-30 кг)", caliber: "5-7 см, Абсолютно сухой", desc: "Тщательно высушенный в полевых условиях лук, прошедший механическую калибровку и профессионально упакованный в дышащие сетки. Идеальный выбор для длительного зимнего хранения." },
+        { id: 5, cat: 'veg', name: "Тепличный Калиброванный Томат", status: "avail", img: "https://img.freepik.com/premium-photo/lunchbox-packaging-vegetable-tomato-food_53876-385647.jpg", moq: "15 тонн (Рефрижератор)", pack: "5-слойная гофротара (10 кг)", caliber: "Розовый / Красный, 150-200 гр", desc: "Отборные томаты, аккуратно уложенные в 2 ряда в прочные картонные коробки с использованием защитных прокладок. Мы предоставляем гарантию доставки товара до вашего склада без механических повреждений." },
+        { id: 6, cat: 'melon', name: "Осенняя Поздняя Дыня", status: "season", img: "https://images.unsplash.com/photo-1571575173700-afb9492e6a50?auto=format&fit=crop&q=80&w=800", moq: "20 тонн (1 Фура)", pack: "Крупный гофрокороб или сетка", caliber: "3-5 кг / шт, Стандарт", desc: "Сладкие и ароматные поздние сорта дыни, обладающие высокой лежкостью. Экспортируется в страны СНГ как в сетках, так и в специализированных больших картонных гофрокоробах для сетей супермаркетов." },
+        { id: 7, cat: 'melon', name: "Транзитный Арбуз", status: "season", img: "https://s0.rbk.ru/v6_top_pics/media/img/5/24/346920117466245.jpeg", moq: "20 тонн (1 Фура)", pack: "Контейнер-паллет (Bulk)", caliber: "7-12 кг, Калиброванный", desc: "Крупные арбузы с особо толстой кожурой, максимально устойчивые к тряске при долгом транзите. Грамотно загружаются в фуры с использованием специальных амортизирующих поддонов." },
+        { id: 8, cat: 'dried', name: "Изюм и Сухофрукты (Опт)", status: "avail", img: "https://img.freepik.com/free-photo/raisins-shelf-supermarket-grocery-store_627829-8326.jpg?semt=ais_hybrid&w=740&q=80", moq: "5 тонн", pack: "Картонный ящик (10 кг) + Полиэтилен", caliber: "Премиум, Очистка 99%", desc: "Высококачественные оптовые партии сухофруктов, прошедшие строгую лазерную сортировку на оборудовании Color Sorter. Гарантированная чистота продукта от примесей составляет 99%." },
+        { id: 9, cat: 'nuts', name: "Миндаль в Скорлупе", status: "avail", img: "https://cdn.27.ua/sc--media--prod/default/82/07/29/82072940-8a2b-4c49-98af-b6ff4f4d8a02.jpg", moq: "3 тонны", pack: "Чистые мешки (25-30 кг)", caliber: "Крупный, Бумажная скорлупа", desc: "Экологически чистый, отборный миндаль, заботливо выращенный в горных районах Сурхандарьинской области. Тщательно просушен и надежно упакован в прочные экспортные мешки." },
+        { id: 10, cat: 'legumes', name: "Маш (Бобовые Культуры)", status: "avail", img: "https://dairynews.today/upload/iblock/32a/vyii729z81405xvttcot0w21rrjp1hze/photo_2022_10_18_11_12_19.jpg", moq: "22 тонны (1 Фура)", pack: "Полипропиленовый мешок (50 кг)", caliber: "3.2mm - 4.0mm+, Калибровка", desc: "Премиальный экспортный маш, прошедший заводскую механическую и оптическую очистку (чистота 99%). Откалиброван и упакован в надежные мешки, соответствующие международным санитарным нормам." }
       ]
     },
     seasonality: {
-      title: "Интерактивная Сезонность",
-      subtitle: "Выберите сезон ниже, чтобы узнать, какие продукты готовы к экспорту.",
-      seasons: ["Весна", "Лето", "Осень", "Зима"],
-      emptyMsg: "В этом сезоне ожидается новый урожай.",
+      title: "Корпоративный Календарь Поставок",
+      subtitle: "Ознакомьтесь с графиком доступности нашей основной экспортной продукции в течение всех четырех сезонов.",
+      seasons: ["Весенний Сезон", "Летний Сезон", "Осенний Сезон", "Зимний Сезон"],
+      emptyMsg: "В этом сезоне мы готовим поля к новому урожаю для будущих экспортных поставок.",
       items: [
         // Весна (Spring)
-        { name: "Ранняя Черешня", active: [0], img: "https://images.unsplash.com/photo-1528820600606-0ef5600cbfee?auto=format&fit=crop&q=80&w=400" }, 
-        { name: "Клубника", active: [0], img: "https://images.unsplash.com/photo-1587324438673-56c802dc28bd?auto=format&fit=crop&q=80&w=400" }, 
-        { name: "Ранний Абрикос", active: [0], img: "https://images.unsplash.com/photo-1622359489955-4700d2da0737?auto=format&fit=crop&q=80&w=400" }, 
+        { name: "Ранняя Черешня", active: [0], img: "https://images.unsplash.com/photo-1559181567-c1643c726a21?auto=format&fit=crop&q=80&w=400" }, 
+        { name: "Клубника", active: [0], img: "https://images.unsplash.com/photo-1517415170068-1bc49aeb00cb?auto=format&fit=crop&q=80&w=400" }, 
+        { name: "Ранний Абрикос", active: [0], img: "https://images.unsplash.com/photo-1596431985959-1c998f480eec?auto=format&fit=crop&q=80&w=400" }, 
         { name: "Молодой Картофель", active: [0], img: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&q=80&w=400" }, 
         { name: "Свежий Чеснок", active: [0], img: "https://images.unsplash.com/photo-1540148426940-664dc15f1066?auto=format&fit=crop&q=80&w=400" }, 
         { name: "Ранняя Капуста", active: [0], img: "https://images.unsplash.com/photo-1596484552834-0a3733b1e062?auto=format&fit=crop&q=80&w=400" }, 
         
         // Лето (Summer)
-        { name: "Персик", active: [1], img: "https://images.unsplash.com/photo-1630138944510-449e21935de9?auto=format&fit=crop&q=80&w=400" }, 
-        { name: "Арбуз", active: [1], img: "https://images.unsplash.com/photo-1589984662646-e7b2e4962f18?auto=format&fit=crop&q=80&w=400" }, 
-        { name: "Дыня", active: [1], img: "https://images.unsplash.com/photo-1598025555678-83141ba57519?auto=format&fit=crop&q=80&w=400" }, 
+        { name: "Персик", active: [1], img: "https://images.unsplash.com/photo-1590412200988-a436970781fa?auto=format&fit=crop&q=80&w=400" }, 
+        { name: "Арбуз", active: [1], img: "https://images.unsplash.com/photo-1625244724103-9df1a070bf3c?auto=format&fit=crop&q=80&w=400" }, 
+        { name: "Дыня", active: [1], img: "https://images.unsplash.com/photo-1571575173700-afb9492e6a50?auto=format&fit=crop&q=80&w=400" }, 
         { name: "Слива", active: [1], img: "https://images.unsplash.com/photo-1600862086300-8cb4948a31db?auto=format&fit=crop&q=80&w=400" }, 
         { name: "Инжир", active: [1], img: "https://images.unsplash.com/photo-1601379327928-bee0a1cb00ce?auto=format&fit=crop&q=80&w=400" }, 
         { name: "Томат (Полевой)", active: [1], img: "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?auto=format&fit=crop&q=80&w=400" }, 
         
         // Осень (Autumn)
-        { name: "Сурханский Гранат", active: [2], img: "https://images.unsplash.com/photo-1590868309235-ea34bed7bd7f?auto=format&fit=crop&q=80&w=400" }, 
-        { name: "Поздний Виноград", active: [2], img: "https://images.unsplash.com/photo-1596431985959-1c998f480eec?auto=format&fit=crop&q=80&w=400" }, 
+        { name: "Сурханский Гранат", active: [2], img: "https://images.unsplash.com/photo-1605342023190-67a3536cce7c?auto=format&fit=crop&q=80&w=400" }, 
+        { name: "Поздний Виноград", active: [2], img: "https://images.unsplash.com/photo-1537494532650-705cdcc07659?auto=format&fit=crop&q=80&w=400" }, 
         { name: "Хурма", active: [2], img: "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&q=80&w=400" }, 
-        { name: "Красное Яблоко", active: [2], img: "https://images.unsplash.com/photo-1560806887-1e4cd0b6fd6c?auto=format&fit=crop&q=80&w=400" }, 
-        { name: "Лук Экспортный", active: [2], img: "https://images.unsplash.com/photo-1518977956812-cd3dbadaaf31?auto=format&fit=crop&q=80&w=400" }, 
-        { name: "Грецкий Орех", active: [2], img: "https://images.unsplash.com/photo-1554904257-27b2b00eefbd?auto=format&fit=crop&q=80&w=400" }, 
+        { name: "Красное Яблоко", active: [2], img: "https://images.unsplash.com/photo-1573246123716-6b1782bfc499?auto=format&fit=crop&q=80&w=400" }, 
+        { name: "Лук Экспортный", active: [2], img: "https://images.unsplash.com/photo-1625904835711-0bd2408c4371?auto=format&fit=crop&q=80&w=400" }, 
+        { name: "Грецкий Орех", active: [2], img: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&q=80&w=400" }, 
 
         // Зима (Winter)
         { name: "Томаты (Теплица)", active: [3], img: "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?auto=format&fit=crop&q=80&w=400" }, 
         { name: "Лимон и Цитрус", active: [3], img: "https://images.unsplash.com/photo-1587317765103-605809783f98?auto=format&fit=crop&q=80&w=400" }, 
         { name: "Сухофрукты", active: [3], img: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&q=80&w=400" }, 
-        { name: "Маш (Бобовые)", active: [3], img: "https://images.unsplash.com/photo-1583091993444-a957dbd7baaa?auto=format&fit=crop&q=80&w=400" }, 
+        { name: "Маш (Бобовые)", active: [3], img: "https://images.unsplash.com/photo-1585227718663-8ebdfa4282e7?auto=format&fit=crop&q=80&w=400" }, 
         { name: "Миндаль", active: [3], img: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&q=80&w=400" }, 
         { name: "Зимняя Морковь", active: [3], img: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&q=80&w=400" } 
       ]
     },
     packaging: {
-      title: "Схема Упаковки и Погрузки",
-      subtitle: "Надежная схема упаковки по международным стандартам логистики.",
+      title: "Характеристики Транспорта и Тары",
+      subtitle: "Ознакомьтесь с нашими стандартами логистики, разработанными для обеспечения 100% сохранности груза при экспорте.",
       truck: "1 Фура (Рефрижератор)",
-      truckDesc: "Температурный режим: +2°C / +4°C. Общий объем: 20-22 тонны.",
-      pallet: "33 Евро Паллета",
-      palletDesc: "Сертифицированные деревянные паллеты 1200x800 мм (с фумигацией).",
-      boxes: "100-120 Ящиков / Паллет",
-      boxesDesc: "5-слойная гофротара или пластиковые ящики. Прокладки между рядами."
+      truckDesc: "Поддержание строгого температурного режима: от +2°C до +4°C. Средний объем загрузки: 20-22 тонны. Полная адаптация для международных перевозок.",
+      pallet: "33 Стандартных Евро Паллеты",
+      palletDesc: "Мы используем исключительно сертифицированные деревянные паллеты (1200x800 мм), прошедшие обязательную процедуру фитосанитарной фумигации.",
+      boxes: "100-120 Ящиков на 1 Паллет",
+      boxesDesc: "Ударопрочная 5-слойная гофротара или специальные пластиковые ящики. Применяются амортизирующие прокладки между рядами продукции."
     },
     calculator: {
-      title: "Калькулятор Логистики",
-      subtitle: "Введите объем груза и пункт назначения, мы рассчитаем примерное время транзита и количество транспорта.",
-      countryLabel: "Страна назначения:",
-      transLabel: "Вид транспорта:",
-      weightLabel: "Объем груза (тонн):",
-      btn: "Рассчитать",
-      resTitle: "Предварительный расчет (Примерно):",
-      resTime: "Примерное время транзита:",
-      resCount: "Необходимый транспорт:",
-      disclaimer: "* Примечание: Все указанные цифры, сроки и цены являются ориентировочными и могут меняться в зависимости от погоды, таможни и сезона.",
-      orderBtn: "Запросить цену с этим расчетом"
+      title: "Калькулятор Транзита и Логистики",
+      subtitle: "Укажите страну назначения и объем планируемого заказа. Наша система автоматически рассчитает ориентировочные сроки доставки и необходимое количество транспорта.",
+      countryLabel: "Страна назначения (Склад):",
+      transLabel: "Вид транспорта для логистики:",
+      weightLabel: "Планируемый объем груза (в тоннах):",
+      btn: "Произвести Автоматический Расчет",
+      resTitle: "Результаты Предварительного Расчета:",
+      resTime: "Ориентировочное время груза в пути:",
+      resCount: "Необходимое количество транспортных средств:",
+      disclaimer: "* Юридическая оговорка: Все указанные выше цифры, сроки и объемы являются ориентировочными. Точные логистические данные фиксируются в контракте с учетом погодных и таможенных условий.",
+      orderBtn: "Запросить коммерческое предложение с этим расчетом"
     },
     team: {
-      title: "Наша Команда",
-      subtitle: "Профессионалы, обеспечивающие высокий уровень экспортного процесса.",
+      title: "Руководящий Состав Компании",
+      subtitle: "Опытные специалисты, гарантирующие надежность компании на международном рынке и бесперебойность всех экспортных процессов.",
       members: [
         { name: "Сардор Рахимов", role: "Генеральный Директор (CEO)", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" },
-        { name: "Алишер Усманов", role: "Начальник Отдела Экспорта", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400" },
-        { name: "Малика Каримова", role: "Менеджер Контроля Качества", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" },
-        { name: "Жасур Бекмуродов", role: "Отдел Логистики и Транзита", img: "https://images.unsplash.com/photo-1556969562-b7b8089b09ad?auto=format&fit=crop&q=80&w=400" }
+        { name: "Алишер Усманов", role: "Начальник Отдела ВЭД", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400" },
+        { name: "Малика Каримова", role: "Менеджер по Сертификации и Качеству", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" },
+        { name: "Жасур Бекмуродов", role: "Специалист по Международной Логистике", img: "https://images.unsplash.com/photo-1556969562-b7b8089b09ad?auto=format&fit=crop&q=80&w=400" }
       ]
     },
     customs: {
-      title: "Таможня и Документы",
-      subtitle: "Мы работаем легально. Нажмите на документ, чтобы посмотреть образец.",
+      title: "Таможенное Оформление и Документация",
+      subtitle: "Вся деятельность нашей компании ведется на 100% легальной основе. Нажмите на документ ниже, чтобы ознакомиться с его утвержденным образцом.",
       docs: [
-        { title: "Фитосанитарный Сертификат", desc: "Подтверждает прохождение карантина.", sample: "Образец Фитосанитарного сертификата" },
-        { title: "Сертификат Происхождения СТ-1", desc: "Для льгот по пошлинам в СНГ.", sample: "Образец сертификата СТ-1" },
-        { title: "Таможенная Декларация (ЭК-10)", desc: "Экспортное оформление.", sample: "Образец ЭК-10" },
-        { title: "Сертификаты Качества", desc: "Global G.A.P, ISO заключения.", sample: "Образец сертификата качества" }
+        { title: "Фитосанитарный Сертификат", desc: "Обязательный международный документ, подтверждающий успешное прохождение государственного карантинного контроля.", sample: "Образец Фитосанитарного Сертификата" },
+        { title: "Сертификат Происхождения СТ-1", desc: "Документ, обеспечивающий получение льгот по таможенным пошлинам при ввозе на территорию стран СНГ.", sample: "Образец Сертификата СТ-1" },
+        { title: "Таможенная Декларация (ЭК-10)", desc: "Декларация, подтверждающая, что экспортное оформление наших грузов проходит по ускоренному «Зеленому коридору».", sample: "Образец Декларации ЭК-10" },
+        { title: "Сертификаты Качества и Безопасности", desc: "Специальные лабораторные заключения и сертификаты (вкл. Global G.A.P, ISO), предоставляемые по требованию партнеров.", sample: "Образец Сертификата Качества" }
       ],
-      modalTitle: "Образец документа (Примерный)"
+      modalTitle: "Утвержденный Образец Документа"
     },
     faq: {
-      title: "Частые Вопросы",
+      title: "Ответы на Вопросы Партнеров",
       items: [
-        { q: "Какой минимальный объем заказа?", a: "Для автотранспорта (фура) минимальный объем составляет 20-22 тонны. Для авиаперевозок от 1 до 5 тонн." },
-        { q: "Каковы условия оплаты?", a: "Мы работаем в основном на условиях FCA и DAP. Оплата банковским переводом: частичная предоплата и остаток по факту загрузки, либо аккредитив (LC)." },
-        { q: "Как гарантируется качество продукции?", a: "Вся продукция проходит фитосанитарный контроль перед отгрузкой. В фуры устанавливаются датчики температуры (термописцы)." },
-        { q: "Сколько времени занимает таможня?", a: "Оформление в Узбекистане через зеленый коридор занимает 2-4 часа. Все сертификаты (СТ-1, Фито) мы готовим сами." }
+        { q: "Каков минимально допустимый объем для оформления экспортного заказа?", a: "Для отгрузки автомобильным транспортом (еврофура) минимальный объем составляет от 20 до 22 тонн. Для авиаперевозок или малотоннажных партий минимальный заказ обсуждается индивидуально и обычно начинается от 1 до 5 тонн." },
+        { q: "Какие международные условия оплаты вы практикуете в работе с B2B клиентами?", a: "В соответствии с правилами Incoterms мы преимущественно работаем на условиях FCA и DAP. Финансовые расчеты осуществляются через банковские переводы (с частичной предоплатой и доплатой по факту погрузки), а для крупных и долгосрочных контрактов возможно использование безотзывного аккредитива (LC)." },
+        { q: "Как вы можете гарантировать, что продукция не испортится во время длительной транспортировки?", a: "Абсолютно вся наша продукция до момента погрузки проходит строгую независимую экспертизу и контроль Государственной фитосанитарной службы. Во время самой перевозки в рефрижераторах в обязательном порядке устанавливаются автономные датчики контроля температуры (термо-регистраторы), обеспечивающие непрерывный мониторинг микроклимата." },
+        { q: "Сколько времени в среднем занимает процесс прохождения таможенного контроля при экспорте?", a: "Благодаря функционированию системы упрощенного таможенного контроля («Зеленый коридор») в Республике Узбекистан, все процедуры экспортного оформления грузов занимают не более 2-4 часов. При этом полный пакет сопроводительных логистических документов (включая СТ-1 и фитосанитарный сертификат) оперативно подготавливается нашими профильными специалистами." }
       ]
     },
     contact: {
-      title: "Оформить Оптовый Заказ",
-      subtitle: "Свяжитесь с нами прямо сейчас, чтобы получить текущие ориентировочные оптовые цены и расчет логистики.",
-      address: "Узбекистан, Сурхандарьинская обл., г. Термез, Агро-Зона",
-      call: "Позвонить",
-      whatsapp: "Написать в WhatsApp"
+      title: "Начать Официальное Сотрудничество",
+      subtitle: "Свяжитесь с нами прямо сейчас, чтобы запросить актуальные оптовые котировки цен и получить точный расчет логистических затрат до склада вашей компании.",
+      address: "Республика Узбекистан, Сурхандарьинская область, г. Термез, Агро-Промышленная зона",
+      call: "Позвонить в компанию",
+      whatsapp: "Написать запрос в WhatsApp"
     }
   }
 };
 
 export default function App() {
-  const [lang, setLang] = useState('uz'); 
+  const [lang, setLang] = useState('ru'); 
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
@@ -518,7 +514,7 @@ export default function App() {
               <Download className="w-4 h-4" /> {t.nav.download}
             </button>
             <button onClick={() => scrollTo('contact')} className="bg-[#0F3D2E] text-white px-5 py-2.5 rounded-full font-semibold hover:bg-[#0a291f] transition-all shadow-lg active:scale-95 flex items-center gap-2">
-              <Phone className="w-4 h-4" /> Aloqa
+              <Phone className="w-4 h-4" /> {t.nav.contact}
             </button>
           </div>
 
@@ -921,13 +917,13 @@ export default function App() {
                                  onClick={() => setCalcTransport(tr)}
                                  className={`flex-1 py-3 rounded-xl font-bold border transition-all ${calcTransport === tr ? 'bg-[#0F3D2E] text-white border-[#0F3D2E]' : 'bg-white text-gray-500 border-gray-200 hover:border-[#C9A14A]'}`}
                               >
-                                 {tr}
+                                 {tr === 'Fura' ? (lang === 'uz' ? 'Fura' : 'Фура') : tr === 'Vagon' ? (lang === 'uz' ? 'Vagon' : 'Вагон') : (lang === 'uz' ? 'Avia' : 'Авиа')}
                               </button>
                            ))}
                         </div>
                      </div>
                      <div>
-                        <label className="block text-sm font-bold text-gray-500 mb-2">{t.calculator.weightLabel} <span className="text-[#0F3D2E]">{calcWeight} tonna</span></label>
+                        <label className="block text-sm font-bold text-gray-500 mb-2">{t.calculator.weightLabel} <span className="text-[#0F3D2E]">{calcWeight} {lang === 'uz' ? 'tonna' : 'тонн'}</span></label>
                         <input 
                            type="range" 
                            min="1" max="120" step="1"
@@ -974,7 +970,7 @@ export default function App() {
                   ) : (
                      <div className="h-full border-2 border-dashed border-gray-200 rounded-3xl flex flex-col items-center justify-center text-gray-400 p-12 text-center">
                         <Search className="w-16 h-16 mb-4 text-gray-300" />
-                        <p className="font-medium">Chap tomondagi ma'lumotlarni kiriting va "Hisoblash" tugmasini bosing.</p>
+                        <p className="font-medium">{lang === 'uz' ? "Chap tomondagi ma'lumotlarni kiriting va \"Hisoblash\" tugmasini bosing." : "Введите данные слева и нажмите кнопку «Рассчитать»."}</p>
                      </div>
                   )}
                </div>
@@ -1028,7 +1024,7 @@ export default function App() {
                 <h4 className="font-bold text-lg text-[#0F3D2E] mb-2">{doc.title}</h4>
                 <p className="text-sm text-gray-500 mb-4 flex-grow">{doc.desc}</p>
                 <span className="text-[#C9A14A] text-sm font-bold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                   <Eye className="w-4 h-4"/> Namuna
+                   <Eye className="w-4 h-4"/> {lang === 'uz' ? 'Namuna' : 'Образец'}
                 </span>
               </div>
             ))}
@@ -1105,7 +1101,7 @@ export default function App() {
 
             <div className="lg:w-1/2 flex flex-col justify-center">
               <div className="bg-white p-8 rounded-2xl shadow-2xl">
-                <h3 className="text-2xl font-bold text-[#0F3D2E] mb-6">Tezkor Bog'lanish</h3>
+                <h3 className="text-2xl font-bold text-[#0F3D2E] mb-6">{lang === 'uz' ? "Tezkor Bog'lanish" : "Быстрая Связь"}</h3>
                 <div className="flex flex-col gap-4">
                   <a href="tel:+998982703797" className="w-full bg-[#0F3D2E] text-white py-4 px-6 rounded-xl font-bold hover:bg-[#0a291f] transition-all flex items-center justify-center gap-2 text-center shadow-lg">
                     <Phone className="w-5 h-5" /> {t.contact.call}
@@ -1209,7 +1205,7 @@ export default function App() {
             <div className="p-4 bg-gray-200 flex-grow flex items-center justify-center overflow-auto relative">
                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-20 pointer-events-none z-10">
                   <BadgeCheck className="w-32 h-32 mb-4 text-[#0F3D2E]" />
-                  <p className="text-4xl font-black uppercase tracking-widest text-[#0F3D2E]">NAMUNA</p>
+                  <p className="text-4xl font-black uppercase tracking-widest text-[#0F3D2E]">{lang === 'uz' ? 'NAMUNA' : 'ОБРАЗЕЦ'}</p>
                </div>
                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800" alt="Document Sample" className="max-w-full max-h-[60vh] object-contain shadow-lg" />
             </div>
