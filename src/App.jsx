@@ -74,39 +74,39 @@ const injectStyles = () => {
 // --- SHARED IMAGES (Optimization) ---
 const IMAGES = {
   // Products
-  pomegranate: "/products/anor.jpg",
+  pomegranate: "/products/Anor.jpg",
   grapes: "/products/uzum.jpg",
   cherry: "/products/gilos.jpg",
   onion: "/products/piyoz.jpg",
-  tomato: "/products/pomidor.jpg",
+  tomato: "/products/pomidor.avif",
   melon: "/products/qovun.jpg",
-  watermelon: "/products/qovun.jpg",
-  dried: "/products/quritilgan.jpg",
+  watermelon: "/products/tarbuz.jpg",
+  dried: "/products/mayiz.avif",
   almond: "/products/bodom.jpg",
-  mung: "/products/mung.jpg",
+  mung: "/products/mosh.jpg",
   // Seasonality
-  strawberry: "https://images.unsplash.com/photo-1517415170068-1bc49aeb00cb?auto=format&fit=crop&q=80&w=800",
-  apricot: "https://images.unsplash.com/photo-1596431985959-1c998f480eec?auto=format&fit=crop&q=80&w=800",
-  potato: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&q=80&w=800",
-  garlic: "https://images.unsplash.com/photo-1540148426940-664dc15f1066?auto=format&fit=crop&q=80&w=800",
-  cabbage: "https://images.unsplash.com/photo-1596484552834-0a3733b1e062?auto=format&fit=crop&q=80&w=800",
-  peach: "https://images.unsplash.com/photo-1590412200988-a436970781fa?auto=format&fit=crop&q=80&w=800",
-  plum: "https://images.unsplash.com/photo-1600862086300-8cb4948a31db?auto=format&fit=crop&q=80&w=800",
-  fig: "https://images.unsplash.com/photo-1601379327928-bee0a1cb00ce?auto=format&fit=crop&q=80&w=800",
-  persimmon: "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&q=80&w=800",
-  apple: "https://images.unsplash.com/photo-1573246123716-6b1782bfc499?auto=format&fit=crop&q=80&w=800",
-  lemon: "https://images.unsplash.com/photo-1587317765103-605809783f98?auto=format&fit=crop&q=80&w=800",
-  carrot: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&q=80&w=800",
+  strawberry: "/products/qulupnoy.jpg",
+  apricot: "/products/shaftoli.jpg",
+  potato: "/products/kartoshka.webp",
+  garlic: "/products/shesnok.webp",
+  cabbage: "/products/karam.jpeg",
+  peach: "/products/shaftoli1.jpeg",
+  plum: "/products/gilos1.webp",
+  fig: "/products/anjir.jpg",
+  persimmon: "/products/xurmo.jpg",
+  apple: "/products/olma.webp",
+  lemon: "/products/limon.jpg",
+  carrot: "/products/sabzi.jpeg",
   // Team
   ceo: "/ceo.jpg",
   coo: "/coo.jpg",
-  qc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
-  logistician: "https://images.unsplash.com/photo-1556969562-b7b8089b09ad?auto=format&fit=crop&q=80&w=400",
+  qc: "/holida.jpg",
+  logistician: "/Alibek.jpg",
   // Document Samples (Namuna suratlari - shu yerga rasm manzillarini yozasiz)
-  doc_fito: "", // masalan: "/sertifikatlar/fito.jpg"
-  doc_st1: "",
-  doc_ex1: "",
-  doc_quality: ""
+  doc_fito: "/doc_fito.jpg", // masalan: "/sertifikatlar/fito.jpg"
+  doc_st1: "/ct1.jpg",
+  doc_ex1: "/deklaratsiya.jpg",
+  doc_quality: "/sifat.jpg"
 };
 
 // --- DATA & TRANSLATIONS ---
@@ -209,10 +209,10 @@ const content = {
     team: {
       title: "Руководящий Состав", subtitle: "Опытные специалисты, гарантирующие надежность компании на международном рынке.",
       members: [
-        { name: "Hasanboy Rahimov", role: "Генеральный Директор (CEO)", img: IMAGES.ceo },
-        { name: "Hayrullo Choriyev", role: "Начальник Отдела ВЭД", img: IMAGES.coo },
-        { name: "Malika Karimova", role: "Менеджер по Качеству", img: IMAGES.qc },
-        { name: "Jasur Bekmurodov", role: "Специалист по Логистике", img: IMAGES.logistician }
+        { name: "Ходжакулов Хусан", role: "Генеральный Директор (CEO)", img: IMAGES.ceo },
+        { name: "Рихсиев Хайрулло", role: "Начальник Отдела ВЭД", img: IMAGES.coo },
+        { name: "Ходжакулова Холида", role: "Менеджер по Качеству", img: IMAGES.qc },
+        { name: "Ходжакулов Алибек", role: "Специалист по Логистике", img: IMAGES.logistician }
       ]
     },
     customs: {
@@ -343,10 +343,10 @@ const content = {
     team: {
       title: "Executive Team", subtitle: "Experienced professionals ensuring our company's reliability in the international market.",
       members: [
-        { name: "Hasanboy Rahimov", role: "Chief Executive Officer", img: IMAGES.ceo },
-        { name: "Hayrullo Choriyev", role: "Head of Foreign Trade", img: IMAGES.coo },
-        { name: "Malika Karimova", role: "Quality Manager", img: IMAGES.qc },
-        { name: "Jasur Bekmurodov", role: "Logistics Specialist", img: IMAGES.logistician }
+        { name: "Xodjaqulov Husan", role: "Chief Executive Officer", img: IMAGES.ceo },
+        { name: "Rixsiev Hayrullo", role: "Head of Foreign Trade", img: IMAGES.coo },
+        { name: "Xodjaqulova Holida", role: "Quality Manager", img: IMAGES.qc },
+        { name: "Xodjaqulov Alibek", role: "Logistics Specialist", img: IMAGES.logistician }
       ]
     },
     customs: {
@@ -477,10 +477,10 @@ const content = {
     team: {
       title: "Boshqaruv Jamoasi", subtitle: "Kompaniyamizning xalqaro bozordagi ishonchliligi va uzluksiz ta'minot jarayonini kafolatlovchi tajribali mutaxassislar.",
       members: [
-        { name: "Hasanboy Rahimov", role: "Boshqaruvchi Direktor (CEO)", img: IMAGES.ceo },
-        { name: "Hayrullo Choriyev", role: "Tashqi Aloqalar Bo'limi Boshlig'i", img: IMAGES.coo },
-        { name: "Malika Karimova", role: "Sifat Nazorati Menejeri", img: IMAGES.qc },
-        { name: "Jasur Bekmurodov", role: "Xalqaro Logistika Mutaxassisi", img: IMAGES.logistician }
+        { name: "Xodjaqulov Husan", role: "Boshqaruvchi Direktor (CEO)", img: IMAGES.ceo },
+        { name: "Rixsiev Hayrullo", role: "Tashqi Aloqalar Bo'limi Boshlig'i", img: IMAGES.coo },
+        { name: "Xodjaqulova Holida", role: "Sifat Nazorati Menejeri", img: IMAGES.qc },
+        { name: "Xodjaqulov Alibek", role: "Xalqaro Logistika Mutaxassisi", img: IMAGES.logistician }
       ]
     },
     customs: {
@@ -566,7 +566,7 @@ export default function App() {
 
   const handleOrder = (productName) => {
     const msg = t.whatsapp.productMsg.replace('{product}', productName);
-    window.open(`https://wa.me/998982703797?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/998931017252?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
   const calculateLogistics = () => {
@@ -599,7 +599,7 @@ export default function App() {
       .replace('{weight}', calcWeight)
       .replace('{count}', calcResult.count)
       .replace('{transport}', calcResult.transportName);
-    window.open(`https://wa.me/998982703797?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/998931017252?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
   const getDocIcon = (idx) => {
@@ -639,7 +639,7 @@ export default function App() {
               <button onClick={() => setLang('uz')} className={`font-bold text-sm transition-colors ${lang === 'uz' ? 'text-[#C9A14A]' : (isScrolled ? 'text-gray-400 hover:text-[#0F3D2E]' : 'text-gray-300 hover:text-white')}`}>UZ</button>
             </div>
 
-            <a href="/katalog.pdf" download="Agro-Surxon-Katalog.pdf" className={`flex items-center gap-2 px-6 py-2.5 rounded-full border-2 border-[#C9A14A] font-semibold transition-all hover:bg-[#C9A14A] hover:text-[#0F3D2E] active:scale-95 ${isScrolled ? 'text-[#0F3D2E]' : 'text-[#C9A14A]'}`}>
+            <a href="/katalog.jpg" download="katalog.jpg" className={`flex items-center gap-2 px-6 py-2.5 rounded-full border-2 border-[#C9A14A] font-semibold transition-all hover:bg-[#C9A14A] hover:text-[#0F3D2E] active:scale-95 ${isScrolled ? 'text-[#0F3D2E]' : 'text-[#C9A14A]'}`}>
               <Download className="w-4 h-4" /> {t.nav.download}
             </a>
             <button onClick={() => scrollTo('contact')} className="bg-[#0F3D2E] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#0a291f] transition-all shadow-lg active:scale-95 flex items-center gap-2">
@@ -1381,7 +1381,7 @@ export default function App() {
 
       {/* --- STICKY MOBILE CALL BUTTON --- */}
       <div className="lg:hidden fixed bottom-6 right-6 z-40 flex flex-col gap-3">
-        <a href="https://wa.me/998982703797" aria-label="WhatsApp" className="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform active:scale-95">
+        <a href="https://wa.me/998931017252" aria-label="WhatsApp" className="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform active:scale-95">
           <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
         </a>
       </div>
