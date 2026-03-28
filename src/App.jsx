@@ -1224,7 +1224,7 @@ export default function App() {
                   </div>
                   <div className="pt-1">
                     <p className="text-sm text-gray-400 font-bold mb-2 uppercase tracking-wider">{t.contact.emailLabel}</p>
-                    <a href="mailto:export@agro-surxon.uz" className="text-xl md:text-2xl font-bold text-white hover:text-[#C9A14A] transition-colors">export@agro-surxon.uz</a>
+                    <a href="mailto:rihsiyev71@mail.ru" className="text-xl md:text-2xl font-bold text-white hover:text-[#C9A14A] transition-colors">rihsiyev71@mail.ru</a>
                   </div>
                 </div>
 
